@@ -1,0 +1,29 @@
+---
+
+-  hosts: all
+   user: root
+   tasks:
+        - name: vg volume group creation
+          lvg:
+               vg: vg1
+               pvs: /dev/sdb,/dev/sdc,/dev/sdd
+
+        - name: lvm creation
+          lvol:
+               vg: vg1
+               lv: lv1
+               # mention space which must combined size of all three PVs
+               size: 900G 
+               
+        - name: create file system for db00
+          filesystem:
+                fstype: xfs
+                dev: /dev/vg1/lv1
+                force: yes
+
+        - name: mount lv1 logical volumes
+          mount:
+                name: /mnt
+                src: /dev/vg1/lv1
+                fstype: xfs
+                state: mounted
