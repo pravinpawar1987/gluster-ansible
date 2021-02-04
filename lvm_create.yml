@@ -15,7 +15,7 @@
                # mention space which must combined size of all three PVs
                size: 900G 
                
-        - name: create file system for db00
+        - name: create file system on lv1
           filesystem:
                 fstype: xfs
                 dev: /dev/vg1/lv1
