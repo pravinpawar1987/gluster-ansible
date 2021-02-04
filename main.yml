@@ -1,0 +1,7 @@
+#/playbooks/main.yml
+---
+- name: create lvm and mount
+  import_playbook: lvm_create.yml #arbitrated_replicated_volume.yml
+
+- name: arbitoary
+  import_playbook: arbitrated_replicated_volume.yml
