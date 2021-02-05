@@ -18,3 +18,4 @@ Advantages of arbitrated replicated volumes
 	
 	
 Disadvantages:
+ - Although arbitrated replicated volumes provide better data consistency than a two-way replicated volume, because they store only metadata, they provide the same level of availability as a two-way replicated volume. To achieve high-availability, you need to use a three-way replicated volume instead of an arbitrated replicated volume.
