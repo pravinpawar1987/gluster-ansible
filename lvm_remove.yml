@@ -1,0 +1,16 @@
+---
+
+-  hosts: all
+   user: root
+   tasks:
+        - name: umount
+          mount:
+               path: /mnt
+               state: unmounted
+
+        - name: lv deletion
+          lvol:
+               lv: lv1
+               vg: vg1
+               state: absent
+               force: yes

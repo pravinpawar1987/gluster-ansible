@@ -6,3 +6,4 @@ Gluster is a scalable, distributed file system that aggregates disk storage reso
 
 Pre-requisite:
 - 3 servers (VM)
+- Ansible installed
