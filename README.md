@@ -15,3 +15,6 @@ Advantages of arbitrated replicated volumes
     The node that contains the arbiter brick of one volume can be configured with the data brick of another volume. This "chaining" configuration allows you to use fewer nodes to fulfill your overall storage requirements. 
 - Easy migration from two-way replicated volumes
     Red Hat Gluster Storage can convert a two-way replicated volume into an arbitrated replicated volume
+	
+	
+Disadvantages:
