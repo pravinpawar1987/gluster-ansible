@@ -21,7 +21,7 @@
                 dev: /dev/vg1/lv1
                 force: yes
 
-        - name: mount lv1 logical volumes
+        - name: mount lv1 logical volume
           mount:
                 name: /mnt
                 src: /dev/vg1/lv1
